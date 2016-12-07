@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.JokeMachine;
+import com.kupferwerk.jokeviews.JokeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +34,11 @@ public class MainActivity extends AppCompatActivity {
       return super.onOptionsItemSelected(item);
    }
 
-   public void tellJoke(View view) {
+   public void tellJokeViewJoke(View view) {
+      JokeActivity.start(getApplicationContext(), JokeMachine.getJokeDB());
+   }
+
+   public void tellToastJoke(View view) {
       Toast.makeText(this, JokeMachine.getJoke(), Toast.LENGTH_LONG)
             .show();
    }
