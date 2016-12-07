@@ -1,0 +1,7 @@
+<resources>
+   <string name="app_name">JokeViews</string>
+   <string name="provide_joke">Please provide a joke</string>
+   <string name="use_starter">Please use JokeView.start(Context, String) to provide a joke</string>
+   <string name="tell_awesome_joke">Tell Awesome Joke</string>
+
+</resources>
