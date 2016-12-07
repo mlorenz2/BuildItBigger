@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
    }
 
    public void tellJoke(View view) {
-      Toast.makeText(this, JokeMachine.getJoke(), Toast.LENGTH_SHORT)
+      Toast.makeText(this, JokeMachine.getJoke(), Toast.LENGTH_LONG)
             .show();
    }
 

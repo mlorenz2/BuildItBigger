@@ -5,7 +5,7 @@ import java.util.Random;
 public class JokeMachine {
 
    private static String[] jokeDB = { "Chuck Norris does BBQ under water",
-         "Chuck Norris once fought against superman. The loser had to war his underwear over his " +
+         "Chuck Norris once fought against superman. The loser had to wear his underwear over his " +
                "pants",
          "Chuck Norris makes fire by rubbing 2 ice cubes together",
          "Chuck Norris counted to infinity. Twice.",
