@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
    }
 
    public void tellGCEJoke(View view) {
-      new EndpointsAsyncTask(this).execute();
+      new EndpointAsyncTask(this).execute();
    }
 
    @Override
