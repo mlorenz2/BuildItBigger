@@ -13,10 +13,6 @@ import com.kupferwerk.jokeviews.TextViewJokeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-   public void handleJoke(String result) {
-      TextViewJokeActivity.start(getApplicationContext(), result);
-   }
-
    @Override
    public boolean onCreateOptionsMenu(Menu menu) {
       // Inflate the menu; this adds items to the action bar if it is present.
