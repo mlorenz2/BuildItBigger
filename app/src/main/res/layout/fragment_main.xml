@@ -24,11 +24,20 @@
         android:text="@string/button_text"/>
 
     <Button
+       android:id="@+id/jokeViewJoker"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_below="@+id/toastJoker"
        android:onClick="tellJokeViewJoke"
        android:text="@string/button_text"/>
+
+    <Button
+       android:id="@+id/gceJoker"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/jokeViewJoker"
+       android:onClick="tellGCEJoke"
+       android:text="@string/button_gce_joke"/>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
