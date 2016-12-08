@@ -1,8 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Context;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.widget.Toast;
 
 import com.example.michaello.myapplication.backend.myApi.MyApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -14,10 +13,13 @@ import java.io.IOException;
 
 class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
    private static MyApi myApiService = null;
-   private Context context;
+   private MainActivity mainActivity;
 
-   public EndpointAsyncTask(Context context) {
-      this.context = context;
+   private ProgressDialog dialog;
+
+   public EndpointAsyncTask(MainActivity context) {
+      this.mainActivity = context;
+      dialog = new ProgressDialog(mainActivity);
    }
 
    @Override
@@ -52,7 +54,16 @@ class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
 
    @Override
    protected void onPostExecute(String result) {
-      Toast.makeText(context, result, Toast.LENGTH_LONG)
-            .show();
+      if (dialog.isShowing()) {
+         dialog.dismiss();
+      }
+      mainActivity.handleJoke(result);
+   }
+
+   @Override
+   protected void onPreExecute() {
+      super.onPreExecute();
+      dialog.setMessage("Please Wait");
+      dialog.show();
    }
 }

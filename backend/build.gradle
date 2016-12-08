@@ -27,6 +27,7 @@ dependencies {
    compile 'com.google.appengine:appengine-endpoints-deps:1.9.34'
    compile 'javax.servlet:servlet-api:2.5'
    compile project(':jokemachine')
+   compile 'junit:junit:4.12'
 }
 
 appengine {
